@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence Part 3</title>
+</head>
+<body>
+    <h1>Sequence Part 3</h1>
+
+    <script>
+
+        var foods = ['rice', 'beans', 'potato', 'carrot'];
+        var myString = "I am really hungry for some";
+
+        for(var eachFoods of foods){
+            console.log(`${myString} ${eachFoods}`);
+        }
+
+        console.log("Another type of For loop below")
+
+        for(var i=0; i < foods.length; i++){ // needs to use the .lenght to compare 
+            console.log(`${myString} ${foods[i]}`);
+        }
+
+    </script>
+    
+</body>
+</html>

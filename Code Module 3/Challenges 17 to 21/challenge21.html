@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenges</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
+        }
+
+        main{
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .blue{color: blue;}
+        .red{color: red;}
+        .big{font-size: 2em;}
+
+        img{
+            float: left;
+            margin-right: 10px;
+        }
+
+        article{overflow: hidden;}
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Page Title</h1>
+            <p>Some basic information about this page.</p>
+        </header>
+        <article id="one">
+            <h2>Article Title</h2>
+            <p class="date">Today's Date</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur enim dolor tempore quasi, dolore quia! Libero perspiciatis et, autem tenetur, error quaerat quam voluptates eius, totam commodi dolore voluptatibus.
+            </p>
+            <blockquote>
+                "You're off to great places, today is your day. Your mountain is waiting, so get on your way."
+                <footer>-Dr. Seuss</footer>
+            </blockquote>
+            <p>
+                <img src="https://meadpoint.net/images/sillyajax.jpg" alt="Ajax">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptas eligendi voluptatum, dolore dolorum eaque quae, rem cumque fugit saepe autem? Sapiente omnis molestias aspernatur consequatur doloremque asperiores est dicta.
+                <a href="http://google.com/">quam porro ut</a>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio repudiandae minima aliquid error, fugit saepe delectus voluptates et perferendis amet doloribus. Distinctio temporibus numquam sunt, nemo suscipit voluptatum fugit doloribus!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laborum similique ex optio cum odio porro necessitatibus dolorem, sit amet sequi recusandae, repellat quos perferendis animi velit consequatur sed deleniti?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque inventore nulla quos nisi quod, ullam laudantium unde? Similique minus distinctio dignissimos aperiam, reiciendis vel doloremque tenetur voluptatum, architecto dolorem iste?
+            </p>
+        </article>
+        <article id="two">
+            <h2>Article Title</h2>
+            <p class="date">Today's Date</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam necessitatibus ab dignissimos consectetur vel at nisi placeat cumque corrupti exercitationem pariatur similique harum, reprehenderit deleniti, itaque eveniet eligendi quidem molestiae.
+                <a href="http://google.com/">option neque</a>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, repellat labore. Perspiciatis, iusto, debitis eligendi illum expedita quo deserunt nam error ea molestiae non iste, dignissimos pariatur veritatis dolores dolorem?
+            </p>
+            <blockquote>
+                "You're braver than you believe, and stronger than you seem, and smarter than you think."
+                <footer>—A. A. Milne</footer>
+            </blockquote>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt eum eos,
+                <a href="https://en.wikipedia.org/wiki/Llama">modi illum nisi quas.</a>
+                Repellendus odit impedit est ab omnis, reiciendis explicabo, amet error, harum officiis vitae quae incidunt!
+            </p>
+        </article>
+        <footer>
+            <p id="copyright">copyright info</p>
+        </footer>
+    </main>
+
+    <script>
+       /* document.getElementById("copyright").style.color="green";
+
+        var changePara = document.getElementsByTagName('p');
+        for (var i = 0;  i < changePara.length; i++){
+            changePara[i].style.color="green";
+        }
+
+        var changeH1 = document.querySelector('h1');
+        changeH1.className = "red";
+
+        var changeToday = document.getElementsByClassName('date');
+        changeToday[1].className = "red"; */
+
+        var changePic = document.querySelector('#one img');
+        changePic.setAttribute('src', 'https://meadpoint.net/images/xmasajax.jpg');
+
+        var secondArtilce = document.querySelectorAll('#two p');
+
+        for(var i = 0; i< secondArtilce.length; i++){
+            secondArtilce[i].className = "blue";
+        }
+
+        var changeText = document.getElementsByTagName('a');
+
+        for( var i=0; i < changeText.length; i++){
+            var link = changeText[i].getAttribute('href');
+
+            if(link === "https://en.wikipedia.org/wiki/Llama"){
+                changeText[i].innerHTML = "Llamas are cool!";
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

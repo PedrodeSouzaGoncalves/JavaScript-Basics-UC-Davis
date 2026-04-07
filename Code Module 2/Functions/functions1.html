@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions in JavaScript</h1>
+
+    <script>
+
+        function doStuff(){
+            var myString = "Here is a message";
+            var upperString = myString.toUpperCase();
+            console.log(myString);
+            console.log(upperString);
+        }
+
+        doStuff(); // you need to call/invoke/run a function in order to use it.
+
+        function bigSmallerNumber(){
+
+            var number = prompt("Enter a whole number", "");
+
+             if (number <= 9){
+                 console.log("You entered a number smaller than 10")
+                 for (var i =0; i <= 9; i++){
+                console.log(`Here is ${i}`);
+                  }
+             } else if(number >= 10){
+                 console.log("You entered a number bigger than 10")
+             }
+                else{
+                    console.log("ERROR: You did not type a number.")
+                }
+        }
+
+        bigSmallerNumber();
+
+    </script>
+</body>
+</html>
